@@ -80,7 +80,6 @@
       Promise.resolve().then(async () => {
 
         const uri = await Homey.api('GET', '/config/uri');
-        console.log({ uri })
         document.getElementById('uri').value = uri || '';
 
         document.getElementById('form').addEventListener('submit', e => {
@@ -97,7 +96,7 @@
               if (uri === '') {
                 Homey.alert('Disconnected from TimescaleDB.\n\nPlease enter a new URI to connect again.');
               } else {
-                Homey.alert('Connected to TimescaleDB!\n\nThe device\'s capabilities values will now start logging.');
+                Homey.alert('Connected to TimescaleDB!\n\nThe device\'s capabilities & logic variables will now start logging.');
               }
             })
             .catch(err => {
