@@ -7,5 +7,8 @@
   },
   "1.0.2": {
     "en": "Fixed a bug where the app would crash on startup."
+  },
+  "2.0.0": {
+    "en": "Added support for variables. Please note that new setups will now use a table called 'devices' instead of 'homey' for devices. Old setups will continue to use the table 'homey'."
   }
 }
